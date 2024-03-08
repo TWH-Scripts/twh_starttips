@@ -1,0 +1,99 @@
+@import url(https://fonts.googleapis.com/css?family=Quattrocento+Sans);
+
+@font-face {
+  font-family: "Quattrocento Sans", sans-serif;
+  src: url(https://fonts.googleapis.com/css?family=Quattrocento+Sans);
+}
+
+body {
+
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 100vh;
+  opacity: 1;
+}
+
+#slider {
+  position: relative;
+  width: 80%; /* Wider slider */
+  max-width: 1200px; /* Maximum width to ensure it looks good on very large screens */
+  height: 290px;
+  margin: 0 auto 50px; /* Positioned towards the bottom with 50px margin */
+  overflow: hidden;
+  /* box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); */
+  
+}
+
+#slider ul {
+  position: relative;
+  list-style: none;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  transition: all 750ms ease;
+  left: 0;
+  display: flex; /* Ensures that list items line up in a row */
+}
+
+#slider ul li {
+  flex: 0 0 auto; /* Allows each list item to maintain its size */
+  width: 100%; /* Each slide will take full width of the slider */
+  height: auto; /* Height adjusts to content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 60px; /* Add padding for text, more on the sides */
+  box-sizing: border-box; /* Include padding in width/height calculation */
+  text-align: center; /* Center-align the text */
+  font-family: "Quattrocento Sans", sans-serif;
+  color: white;
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: black;
+  font-size: 25px;
+}
+
+#slider #prev, #slider #next {
+  width: 40px;
+  line-height: 40px;
+  font-size: 2.5rem;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  color: white;
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: black;
+  /*background: #f9f7fb; */
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 150ms ease;
+}
+
+#slider #prev:hover, #slider #next:hover {
+  /*background-color: rgba(0, 0, 0, 0.5);
+  color: white;*/
+  scale: 1.1;
+}
+
+#slider #next {
+  right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  #slider {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #slider {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  #slider ul li {
+    font-size: 14px;
+  }
+}
