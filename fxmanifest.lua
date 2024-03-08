@@ -6,7 +6,7 @@ ui_page 'ui/index.html'
 
 version '1.0.0'
 author 'TWH Scripts'
-description 'Showing some tips during the loading screen'
+description 'Showing tips during the loading screen'
 
 client_scripts {
     'client.lua'

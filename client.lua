@@ -1,3 +1,6 @@
+-- Wait time in ms before the tips are hidden. 
+-- Depends on the time needed until character is selected and the loading screen is finished
+-- So if the messages are hidden too early, increase the time. If they are hidden too late, decrease the time.
 local waitTimer = 7000
 
 Citizen.CreateThread(function()
@@ -32,16 +35,7 @@ AddEventHandler("vorp:SelectedCharacter", function()
 end)
 
 
---[[ AddEventHandler("twh_core:allVorpCoreLoadingScreensWillFinishIn4Seconds", function()
-	print("twh_startTipps hidden")
-	SetNuiFocus(false, false)
-	SendNUIMessage({
-		action = "none",
-		show = false,
-	})
-end) ]]
-
-
+-- use this command to test the tips without having to restart the game
 RegisterCommand("testTipps", function(source, args, rawCommand)
     SendNUIMessage({
         action = 'startup',
