@@ -1,2 +1,7 @@
 # twh_starttips
-Showing tips during the loading screen
+This script shows tips during the loading screen. Insert your custom loading screen tips in tehe `ui/scripts.js` file.
+
+If the tips stay to long on the screen or disappear to soon, change the `waitTimer` in `client.lua`
+
+# Example
+![](example.gif)
